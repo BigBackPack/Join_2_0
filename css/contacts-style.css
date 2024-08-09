@@ -1,0 +1,391 @@
+html{ overflow: hidden;}
+
+.contacts-container{
+    display: flex;
+    margin: 64px 64px 0 0;
+}
+
+.contacts-content-left{
+    width: 30%;
+    background-color: white;
+    padding: 24px;
+    height: 100dvh;
+}
+
+.contacts-content-right{margin: 64px;}
+
+.contacts-title-container{
+    display: flex;
+    align-items: center;
+}
+
+.contact-slogan{
+    margin-left: 24px;
+    padding-left:24px;
+    border-left: 2px solid var(--secondaryColor);
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.contacts-slogan-blue-line{display: none;}
+
+.full-with{width: 100%;}
+
+.individual-content-container{overflow-y: hidden;}
+
+/* #region sorted contact view ---------------------*/ 
+.deatailed-contact-container{display: block;}
+
+.contact-preview{
+    display: flex;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.contact-preview:hover{
+    background-color: var(--mainColorHover);
+    color: white;
+}
+
+.aphabetical-indicator{
+    border-bottom: 2px solid var(--borderColor);
+    padding: 0 34px;
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--borderColor);
+}
+
+.sorted-contact-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: orange;
+    min-width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 24px;
+}
+
+.sorted-contact-icon-overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: orange;
+    min-width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 24px;
+}
+
+.contac-name-preview{font-size: 1.2rem;}
+
+.alphabetic-sorting-container{
+    margin-top: 14px;
+    max-height: 80%;
+    overflow-y: scroll;
+    padding-right: 14px;
+}
+
+.alphabetic-sorting-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.alphabetic-sorting-container::-webkit-scrollbar-thumb {
+    background-color: var(--borderColor);
+    border-radius: 10px;
+}
+
+/* #endregion sorted contact view*/
+
+
+/* #region detailed contact view ---------------------*/ 
+.deatailed-contact-container{
+    display: none; /*block*/
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+
+.flex-center img{margin-right: 8px;}
+.flex-center p{margin-right: 24px;}
+
+.edit-links{cursor: pointer;}
+.edit-links:hover{color: var(--secondaryColor);}
+.edit-links:hover .svg-icon{fill: var(--secondaryColor);}
+
+.deatailed-contact-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: orange;
+    min-width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 64px;
+}
+
+.contact-suptitle{padding-top: 24px;}
+
+.contacts-title-container{
+    display: flex;
+}
+
+.back-to-contacts-btn{
+    cursor: pointer;
+    display: none;
+}
+/* #endregion detailed contact view*/
+
+
+/* #region add contact overlay -----------------------*/ 
+.fullscreen-overlay{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlayBgColor);
+    backdrop-filter: blur(3px);
+    z-index: 202;
+    display: none; /*flex*/
+    justify-content: center;
+    align-items: center;
+}
+
+.add-contact-form{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    background-color: var(--bgColor);
+    border-radius: 24px;
+    overflow: hidden;
+    z-index: 300;
+}
+
+.close-button-container-mobile{
+    display: none;
+    justify-content: right;
+    z-index: 120;
+    position: relative;
+    top: 0px;
+    right: 64px;
+}
+
+.close-button-container-desktop{
+    display: flex;
+    justify-content: right;
+    z-index: 120;
+    position: relative;
+    top: -32px;
+    right: 64px;
+    width: 100%;
+}
+
+.close-icon-svg{
+    fill: var(--mainColor);
+}
+
+.overlay-close-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.overlay-close-button:hover{background-color: var(--secondaryColor);}
+
+.overlay-close-button:hover .close-icon-svg{fill: var(--white);}
+
+/* info : right side */
+.add-contact-info-container{
+    background-color: var(--mainColor);
+    width: 500px;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 24px;
+}
+
+.add-contact-info-container img{
+    background-color: var(--mainColor);
+    width: 50px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.add-contact-overlay-title{
+    font-size: 2.2rem;
+    line-height: 0.1rem;
+    font-weight: bolder;
+}
+
+.add-contact-overlay-slogan{
+    font-weight: lighter;
+    line-height: 0.1rem;
+}
+
+.blue-line{
+    border-top: 2px solid var(--secondaryColor);
+    width: 50px;
+}
+
+/* inputs : left side*/
+.add-input-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.persona-icon-container{
+    display: flex;
+    justify-content: center;
+    height: 64px;
+}
+
+.persona-icon{
+    width: 100px;
+    height: 100px;
+    margin: 0 44px;
+}
+
+.contact-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin-right: 24px;
+}
+
+.contact-inputs input{
+    margin: 12px 0;
+}
+
+.button-container{
+    display: flex;
+    justify-content: left;
+    width: 400px;
+    margin-top: 24px;
+}
+
+.button-container button{
+    margin-right: 24px;
+}
+
+.secondary-button:hover .svg-icon{fill: var(--secondaryColor);}
+
+/* #endregion add contact overlay*/
+
+
+/* #region add contact radio btn ---------------------- */
+.add-contact-radio-btn{
+    position: fixed; 
+    bottom: 100px;
+    right: 30px; 
+    z-index: 99; 
+    border: none;
+    outline: none; 
+    background-color: var(--mainColor);
+    color: var(--white); 
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 6px; 
+    font-size: 1.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+  
+  .add-contact-radio-btn:hover{background-color: var(--secondaryColor);}
+/* #endregion add contact radio btn*/
+
+
+/* #region edit contact radio btn ---------------------- */
+.edit-contact-radio-btn{
+    position: fixed; 
+    bottom: 100px;
+    right: 30px; 
+    z-index: 201; 
+    border: none;
+    outline: none; 
+    background-color: var(--mainColor);
+    color: var(--white); 
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 6px; 
+    font-size: 1.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+  
+  .edit-contact-radio-btn:hover{background-color: var(--secondaryColor);}
+/* #endregion add contact radio btn*/
+
+
+/* #region edit contact options popup ----------------- */
+.edit-contact-options-popup{
+    position: fixed; 
+    bottom: 100px;
+    right: 30px; 
+    z-index: 300; 
+    border: none;
+    outline: none; 
+    background-color: var(--white);
+    color: var(--mainColor); 
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100px;
+    height: 100px;
+    padding-left: 14px;
+    border-radius: 24px 24px 0 24px;
+    filter: drop-shadow(0 4px 2px #00000036);
+  }
+
+.edit-links-mobile{
+    font-size: 1rem;
+    margin: 0;
+    line-height: 0.5rem;
+  }
+
+.edit-links-mobile{cursor: pointer;}
+.edit-links-mobile:hover{color: var(--secondaryColor);}
+.edit-links-mobile:hover .svg-icon{fill: var(--secondaryColor);}
+/* #endregion add contact options popup */

@@ -1,0 +1,24 @@
+<div class="status-bar-container">
+    <h1>Kanban Project mangement Tool</h1>
+
+    <!-- logo : only visible in mobile view -->
+    <a href="summary.html">
+    <img class="join-logo-status-bar" src="../img/join_logo_dark.svg" alt="Join Logo"></a>
+
+    <div class="profile-container">
+        <a href="help.html">
+            <div class="help-icon" aria-label="help?">?</div>
+        </a>
+        <div onclick="toggleProfileMenuOn()" id="profile-icon" class="profile-icon" aria-label="menu">PK</div>
+    </div>
+
+    <div class="profile-menu-container" id="profile-menu-container">
+        <a href="legal.html">Legal Notice</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="index.html" onclick="logOut()">Log out</a>
+    </div>
+
+    <div class="full-screen-overlay-profile-menu" onclick="toggleProfileMenuOff()"></div>
+</div>
+
+

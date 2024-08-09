@@ -1,0 +1,90 @@
+.blue-bg{
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--mainColor);
+    display: none;
+}
+
+@media (max-width: 800px){
+    .blue-bg{
+        display: block;
+    }
+}
+
+/* Common logo container styles */
+.intro-logo-container-dark, .intro-logo-container-bright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Dark logo */
+#logo-dark img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveLogo-dark 0.8s forwards linear;
+    transition: all 1.5s ease-in-out;
+    display: none; /* Initially hidden */
+}
+
+/* Bright logo */
+#logo-bright img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveLogo-bright 0.8s forwards linear;
+    transition: all 1.5s ease-in-out;
+}
+
+/* #region logo animation ------------------------------------------ */
+@keyframes moveLogo-dark {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        height: auto;
+        width: 200px;
+    }
+    25% {height: 175px;}
+    50% {height: 150px;}
+    75% {height: 125px;}
+    100% {
+        top: 80px;
+        left: 80px;
+        transform: translate(0, 0);
+        height: 100px;
+        width: auto;
+    }
+}
+
+@keyframes moveLogo-bright {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        height: auto;
+        width: 200px;
+    }
+    25% {height: 175px;}
+    50% {height: 150px;}
+    75% {height: 125px;}
+    100% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        height: 100px;
+        width: auto;
+    }
+}
+/* #endregion logo animation */

@@ -1,0 +1,145 @@
+body{margin: 0;}
+
+p{margin: 0;}
+
+form{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.login-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--bgColor);
+}
+
+.login-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.login-header img{
+    height: 100px;
+    padding-top: 80px;
+    padding-left: 80px;
+}
+
+.login-header-signup{
+    padding-top: 80px;
+    padding-right: 80px;
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+}
+
+.login-header-signup a{
+    text-decoration: none;
+    color: var(--mainColor);
+    cursor: pointer;
+    display: block;
+}
+
+.login-card {
+    background-color: var(--white);
+    padding: 48px 0;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0 4px 2px var(--dropShadowColor));
+}
+
+.login-card-title {
+    font-size: 61px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--secondaryColor);
+}
+
+.login-card-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-card-inputs input{
+    width: 400px;
+    height: 28px;
+    border-radius: 10px;
+    border: 1px solid var(--borderColor);
+    padding: 12px 21px 12px 21px;
+}
+
+.email-input{
+    background-image: url(../img/mail_icon.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+}
+
+.password-input{
+    background-image: url(../img/lock_icon.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+}
+
+.login-card-checkbox{
+    display: flex;
+    gap: 5px;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.login-card-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 25px;
+}
+
+.login-footer{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.login-footer a{
+    text-decoration: none;
+    color: var(--borderColor);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.only-mobile{
+    display: none;
+}
+
+
+/* Landscape mode */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+    body::before {
+        content: "Please switch to portrait mode to view this website.";
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--mainColor);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.6em;
+        position: fixed;
+        z-index: 9999;
+    }
+}

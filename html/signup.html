@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex" />
+    <link rel="shortcut icon" href="../img/fav_icon.png" type="image/png">
+
+    <!-- css-links -->
+    <link rel="stylesheet" href="../css/signup-style.css">
+    <link rel="stylesheet" href="../css/global-style.css">
+
+    <!-- css media queries -->
+    <link rel="stylesheet" href="../css/media/signup-media.css">
+
+    <!-- js-links -->
+    <script src="../js/register-script.js" defer></script>
+
+    <title>Sign up</title>
+</head>
+
+<body onload="init()">
+    <div class="signup-body">
+        <div class="signup-header">
+            <img src="../img/join_logo_dark.svg">
+        </div>
+
+        <div class="signup-card" id="signup-card">
+            <div class="signup-card-head">
+                <a href="index.html"><img src="../img/arrow_left_icon.svg"></a>
+                <p class="signup-card-title">Sign up</p>
+                <div class="spacer"></div>
+            </div>
+           
+            <form id="signup-form">
+                <div class="signup-card-input">
+                    <input id="nameInput" type="text" placeholder="Name" class="name-input" required>
+                    <input id="mailInput" type="email" placeholder="Email" class="email-input" required>
+                    <input id="passwordInput" type="password" placeholder="Password" class="password-input" required>
+                    <input id="confirmPasswordInput" type="password" placeholder="Confirm Password" class="password-input" required>
+                </div>
+                <div class="signup-card-checkbox">
+                    <input type="checkbox" required>
+                    <p>I accept the <a href="indie-privacy.html">Privacy policy</a></p>
+                </div>
+                <div class="signup-card-button">
+                    <button type="submit" class="primary-button" id="sign-up-btn">
+                        Sign up
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="signup-footer">
+            <a href="indie-privacy.html">Privacy Policy</a>
+            <a href="indie-legal.html"> Legal notice</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
